@@ -9,7 +9,6 @@
 		IconSearch,
 		IconCoin,
 		IconChartBar,
-		IconPlayerPlay,
 		IconSparkles,
 		IconClockHour4,
 		IconTargetArrow,
@@ -25,14 +24,14 @@
 		},
 		{
 			icon: IconTag,
-			title: 'Multi-Marketplace Listings',
-			description: 'Manage listings across marketplaces from one central dashboard.',
+			title: 'Listing Management',
+			description: 'Create, manage, and optimize all your eBay listings from one dashboard.',
 			href: '/features#listings'
 		},
 		{
 			icon: IconTruck,
-			title: 'Order Management',
-			description: 'Real-time notifications and centralized order tracking.',
+			title: 'Orders & Shipping',
+			description: 'Track orders in real time and buy shipping labels—no separate subscription needed.',
 			href: '/features#orders'
 		},
 		{
@@ -80,7 +79,7 @@
 </script>
 
 <svelte:head>
-	<title>LimeStack - Multi-Marketplace Inventory Management for eBay Sellers</title>
+	<title>LimeStack - Inventory & Listing Management for eBay Sellers</title>
 </svelte:head>
 
 <!-- Hero Section -->
@@ -97,7 +96,7 @@
 				<!-- Badge -->
 				<div class="mb-6 inline-flex items-center gap-2 rounded-full border border-primary-200 bg-primary-50 px-4 py-1.5">
 					<span class="h-2 w-2 animate-pulse rounded-full bg-primary-500"></span>
-					<span class="text-sm font-medium text-primary-700">Now with AI-powered descriptions</span>
+					<span class="text-sm font-medium text-primary-700">AI built right in</span>
 				</div>
 
 				<!-- Headline -->
@@ -110,8 +109,7 @@
 
 				<!-- Subheadline -->
 				<p class="mt-6 text-lg text-gray-600 sm:text-xl">
-					Source deals, manage inventory, create listings, and track orders—all from one place.
-					Stop juggling spreadsheets and start scaling your business.
+					Source deals, manage inventory, create listings, ship orders—all from one place. Stop juggling spreadsheets and extra subscriptions.
 				</p>
 
 				<!-- CTA Buttons -->
@@ -127,8 +125,7 @@
 						href="/features"
 						class="inline-flex items-center justify-center gap-2 rounded-xl border border-gray-200 bg-white px-8 py-4 text-base font-semibold text-gray-700 transition-all hover:border-gray-300 hover:bg-gray-50"
 					>
-						<IconPlayerPlay size={20} />
-						Watch Demo
+						Explore Features
 					</a>
 				</div>
 
@@ -208,29 +205,6 @@
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<!-- Social Proof -->
-<section class="border-y border-gray-100 bg-white py-12">
-	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-		<p class="mb-8 text-center text-sm font-medium text-gray-500">TRUSTED BY RESELLERS SELLING ON</p>
-		<div class="flex flex-wrap items-center justify-center gap-8 sm:gap-16">
-			<!-- eBay -->
-			<div class="flex flex-col items-center gap-2">
-				<svg class="h-10" viewBox="0 0 300 120" fill="none">
-					<path d="M35.9 65.2c0-15.4 8.8-26.2 25.4-26.2 14.9 0 23.6 9.1 23.6 24.8v4.1H47.6c.7 9.2 6.2 14 14.5 14 6.9 0 11.4-3.2 13.1-8.4h9.2c-2.1 10.1-11.3 16.4-22.5 16.4-17.1 0-26-11.1-26-24.7zm37.8-5.4c-.4-8.1-5.5-12.9-13.2-12.9-7.4 0-12.8 4.8-14 12.9h27.2z" fill="#E53238"/>
-					<path d="M91.7 89.3V25.5h10.4v25.7h.3c2.9-6.8 9.8-12.2 19.3-12.2 15.1 0 24.7 11.8 24.7 26.1 0 14.2-9.6 26-24.7 26-9.5 0-16.4-5.4-19.3-12.2h-.3v10.4H91.7zm28.5-6.8c10.4 0 16.3-8.4 16.3-17.4 0-9-5.9-17.4-16.3-17.4-10.4 0-16.3 8.4-16.3 17.4 0 9 5.9 17.4 16.3 17.4z" fill="#0064D2"/>
-					<path d="M192.9 89.3c-5.2 0-8.6-3.4-8.6-8.8v-.8h-.3c-2.5 6.5-9.7 11.4-18.3 11.4-10.5 0-17.5-6.1-17.5-15 0-10.4 8.8-15.5 22.2-16.8l13.9-1.4v-2c0-6.4-4.3-9.8-11.1-9.8-6.5 0-10.8 3.1-11.6 8.1h-10c.7-10.5 9.6-16.4 22-16.4 13.5 0 21.1 6.5 21.1 18.2v24.6c0 1.8.8 2.7 2.5 2.7h1.8v8c-1.7.5-3.8 0-6.1 0zm-10.2-24.7l-12.4 1.4c-8.1.9-11.6 3.8-11.6 8.8 0 4.5 3.6 7.5 9.8 7.5 8.8 0 14.2-5.9 14.2-13.8v-3.9z" fill="#F5AF02"/>
-					<path d="M232.1 103.5c-12.9 0-22.8-5.1-24.3-15h10.5c1.2 4.8 6.1 7.4 14 7.4 10.4 0 15.7-5.4 15.7-14.9v-8h-.3c-2.8 6.1-9.5 10.7-18.5 10.7-14.7 0-24-11.1-24-25.1 0-14 9.3-25.1 24-25.1 9 0 15.7 4.6 18.5 10.7h.3V40.8h10.4v40.2c0 15.1-10.8 22.5-26.3 22.5zm1.5-28.7c9.9 0 15.8-7.8 15.8-16.3 0-8.5-5.9-16.3-15.8-16.3-9.9 0-15.8 7.8-15.8 16.3 0 8.5 5.9 16.3 15.8 16.3z" fill="#86B817"/>
-				</svg>
-			</div>
-			<!-- More marketplaces indicator -->
-			<div class="flex items-center gap-2 text-gray-400">
-				<span class="text-lg">+</span>
-				<span class="text-sm font-medium">more marketplaces</span>
 			</div>
 		</div>
 	</div>

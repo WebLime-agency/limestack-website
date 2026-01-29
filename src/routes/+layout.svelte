@@ -18,8 +18,8 @@
 
 	const featureLinks = [
 		{ href: '/features#inventory', label: 'Inventory Management', desc: 'Track every item from purchase to sale' },
-		{ href: '/features#listings', label: 'Multi-Marketplace Listings', desc: 'List once, sell everywhere' },
-		{ href: '/features#orders', label: 'Order Management', desc: 'Real-time sync and notifications' },
+		{ href: '/features#listings', label: 'Listing Management', desc: 'List smarter, sell faster' },
+		{ href: '/features#orders', label: 'Orders & Shipping', desc: 'Track orders and print labels' },
 		{ href: '/features#source', label: 'Source Deals', desc: 'Find your next flip' },
 		{ href: '/features#offers', label: 'Offer Management', desc: 'Handle Best Offers like a pro' },
 		{ href: '/features#analytics', label: 'Analytics', desc: 'Know your numbers' }
@@ -31,8 +31,8 @@
 </script>
 
 <svelte:head>
-	<title>LimeStack - Multi-Marketplace Inventory Management for eBay Sellers</title>
-	<meta name="description" content="Source deals, manage listings, track orders across eBay and more. The all-in-one platform for resellers." />
+	<title>LimeStack - Inventory & Listing Management for eBay Sellers</title>
+	<meta name="description" content="Source deals, manage listings, and track orders on eBay. The all-in-one platform for resellers." />
 </svelte:head>
 
 <div class="min-h-screen bg-white">
@@ -93,7 +93,7 @@
 
 				<!-- CTA Buttons -->
 				<div class="hidden items-center gap-3 lg:flex">
-					<a href="/login" class="rounded-lg px-4 py-2 text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">
+					<a href="https://app.limestack.io/auth/login" class="rounded-lg px-4 py-2 text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">
 						Log in
 					</a>
 					<a href="/signup" class="rounded-lg bg-primary-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-primary-700">
@@ -128,7 +128,7 @@
 							</a>
 						{/each}
 						<hr class="my-2 border-gray-100" />
-						<a href="/login" class="rounded-lg px-4 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50">
+						<a href="https://app.limestack.io/auth/login" class="rounded-lg px-4 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50">
 							Log in
 						</a>
 						<a href="/signup" class="mx-4 mt-2 rounded-lg bg-primary-600 px-4 py-2 text-center text-sm font-medium text-white">

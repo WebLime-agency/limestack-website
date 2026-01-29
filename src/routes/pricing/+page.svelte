@@ -11,7 +11,7 @@
 			yearlyPrice: 0,
 			features: [
 				{ name: 'Up to 100 inventory items', included: true },
-				{ name: '1 marketplace account', included: true },
+				{ name: '1 eBay account', included: true },
 				{ name: 'Basic analytics', included: true },
 				{ name: 'Order tracking', included: true },
 				{ name: 'Email support', included: true },
@@ -31,7 +31,7 @@
 			yearlyPrice: 24,
 			features: [
 				{ name: 'Unlimited inventory items', included: true },
-				{ name: 'Up to 3 marketplace accounts', included: true },
+				{ name: 'Up to 3 eBay accounts', included: true },
 				{ name: 'Advanced analytics', included: true },
 				{ name: 'Order tracking', included: true },
 				{ name: 'Priority support', included: true },
@@ -51,7 +51,7 @@
 			yearlyPrice: 66,
 			features: [
 				{ name: 'Unlimited inventory items', included: true },
-				{ name: 'Unlimited marketplace accounts', included: true },
+				{ name: 'Unlimited eBay accounts', included: true },
 				{ name: 'Advanced analytics', included: true },
 				{ name: 'Order tracking', included: true },
 				{ name: 'Dedicated support', included: true },
@@ -84,8 +84,8 @@
 			answer: 'We accept all major credit cards (Visa, Mastercard, American Express, Discover) as well as PayPal. For Business plans, we can also arrange invoicing for annual subscriptions.'
 		},
 		{
-			question: 'How does marketplace account counting work?',
-			answer: "Each connected marketplace account counts toward your plan's limit. For example, if you have a personal and business selling account, that counts as 2 accounts. You can connect/disconnect accounts at any time."
+			question: 'How does eBay account counting work?',
+			answer: "Each connected eBay account counts toward your plan's limit. For example, if you have a personal and business eBay account, that counts as 2 accounts. You can connect/disconnect accounts at any time."
 		},
 		{
 			question: 'What happens to my data if I cancel?',
@@ -264,7 +264,7 @@
 						<td class="p-4 text-center text-gray-600">Unlimited</td>
 					</tr>
 					<tr>
-						<td class="p-4 text-gray-700">Marketplace accounts</td>
+						<td class="p-4 text-gray-700">eBay accounts</td>
 						<td class="p-4 text-center text-gray-600">1</td>
 						<td class="bg-primary-50/50 p-4 text-center text-gray-600">3</td>
 						<td class="p-4 text-center text-gray-600">Unlimited</td>

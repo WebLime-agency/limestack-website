@@ -47,13 +47,13 @@
 		{
 			id: 'listings',
 			icon: IconTag,
-			title: 'Multi-Marketplace Listings',
-			tagline: 'List once, sell everywhere',
-			description: 'Create and manage listings across marketplaces from one central dashboard. Sync inventory automatically across all platforms.',
+			title: 'Listing Management',
+			tagline: 'List smarter, sell faster',
+			description: 'Create and manage your eBay listings from one central dashboard. Draft, publish, and revise with ease.',
 			highlights: [
-				{ icon: IconRefresh, title: 'Auto-Sync', desc: 'Inventory updates automatically when items sell on any platform' },
+				{ icon: IconRefresh, title: 'Auto-Sync', desc: 'Inventory updates automatically when items sell' },
 				{ icon: IconSparkles, title: 'Bulk Operations', desc: 'List, revise, or end multiple items at once' },
-				{ icon: IconPhoto, title: 'Photo Optimization', desc: 'Automatically format and optimize photos for each marketplace' },
+				{ icon: IconPhoto, title: 'Photo Optimization', desc: 'Automatically format and optimize photos for your listings' },
 				{ icon: IconHistory, title: 'Draft Management', desc: 'Save listings as drafts and publish when ready' }
 			],
 			screenshot: {
@@ -68,13 +68,13 @@
 		{
 			id: 'orders',
 			icon: IconTruck,
-			title: 'Order Management',
+			title: 'Orders & Shipping',
 			tagline: 'Never miss a sale',
-			description: 'Real-time order notifications and centralized tracking. Know the moment an item sells and manage fulfillment from one place.',
+			description: 'Real-time order notifications, centralized tracking, and built-in shipping. Buy and print labels directly—no separate Shippo or ShippingEasy subscription needed.',
 			highlights: [
 				{ icon: IconBell, title: 'Instant Notifications', desc: 'Get notified immediately when orders come in' },
-				{ icon: IconRefresh, title: 'Real-Time Sync', desc: 'Orders sync every 15 seconds from all marketplaces' },
-				{ icon: IconTruck, title: 'Shipping Integration', desc: 'Print labels and track shipments without leaving the app' },
+				{ icon: IconRefresh, title: 'Real-Time Sync', desc: 'Orders sync every 15 seconds from eBay' },
+				{ icon: IconTruck, title: 'Shipping Integration', desc: 'Purchase and print shipping labels for eBay orders or ad hoc shipments' },
 				{ icon: IconChartBar, title: 'Sales Analytics', desc: 'Track daily, weekly, and monthly sales performance' }
 			],
 			screenshot: {
@@ -356,10 +356,10 @@
 		<div class="mx-auto max-w-2xl text-center">
 			<span class="text-sm font-semibold uppercase tracking-wider text-primary-600">Integrations</span>
 			<h2 class="mt-3 text-3xl font-bold text-gray-900 sm:text-4xl">
-				Connect your marketplaces
+				Seamless eBay integration
 			</h2>
 			<p class="mt-4 text-lg text-gray-600">
-				Built for multi-marketplace selling. Connect where you sell and manage everything in one place.
+				Connect your eBay account and manage everything from one place.
 			</p>
 		</div>
 
@@ -376,18 +376,7 @@
 				<span class="font-medium text-gray-900">eBay</span>
 				<span class="rounded-full bg-primary-100 px-3 py-1 text-xs font-medium text-primary-700">Available</span>
 			</div>
-			<div class="flex flex-col items-center gap-3 opacity-50">
-				<div class="flex h-24 w-24 items-center justify-center rounded-2xl border border-dashed border-gray-300 bg-gray-50">
-					<span class="text-3xl text-gray-400">+</span>
-				</div>
-				<span class="font-medium text-gray-500">More marketplaces</span>
-				<span class="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-500">In development</span>
-			</div>
 		</div>
-
-		<p class="mt-8 text-center text-sm text-gray-500">
-			We're actively expanding marketplace support. Have a request? <a href="/contact" class="text-primary-600 hover:underline">Let us know</a>.
-		</p>
 	</div>
 </section>
 
