@@ -30,7 +30,6 @@
 		{ href: '/features', label: 'Features', hasDropdown: true },
 		{ href: '/pricing', label: 'Pricing' },
 		{ href: '/about', label: 'About' },
-		{ href: '/blog', label: 'Blog' },
 		{ href: '/contact', label: 'Contact' }
 	];
 
@@ -168,7 +167,7 @@
 	<!-- Footer -->
 	<footer class="border-t border-gray-100 bg-gray-50 dark:border-gray-700/80 dark:bg-gray-800">
 		<div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
-			<div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
+			<div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
 				<!-- Brand -->
 				<div class="lg:col-span-2">
 					<a href="/" class="flex items-center gap-2">
@@ -200,8 +199,6 @@
 						<li><a href="/features" class="text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-50">Features</a></li>
 						<li><a href="/pricing" class="text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-50">Pricing</a></li>
 						<li><a href="/features#integrations" class="text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-50">Integrations</a></li>
-						<li><a href="/changelog" class="text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-50">Changelog</a></li>
-						<li><a href="/roadmap" class="text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-50">Roadmap</a></li>
 					</ul>
 				</div>
 
@@ -210,22 +207,8 @@
 					<h4 class="font-semibold text-gray-900 dark:text-gray-50">Company</h4>
 					<ul class="mt-4 space-y-3 text-sm">
 						<li><a href="/about" class="text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-50">About Us</a></li>
-						<li><a href="/blog" class="text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-50">Blog</a></li>
 						<li><a href="/careers" class="text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-50">Careers</a></li>
 						<li><a href="/contact" class="text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-50">Contact</a></li>
-						<li><a href="/press" class="text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-50">Press Kit</a></li>
-					</ul>
-				</div>
-
-				<!-- Resources -->
-				<div>
-					<h4 class="font-semibold text-gray-900 dark:text-gray-50">Resources</h4>
-					<ul class="mt-4 space-y-3 text-sm">
-						<li><a href="/help" class="text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-50">Help Center</a></li>
-						<li><a href="/docs" class="text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-50">Documentation</a></li>
-						<li><a href="/guides" class="text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-50">Guides</a></li>
-						<li><a href="/api" class="text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-50">API Reference</a></li>
-						<li><a href="/status" class="text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-50">System Status</a></li>
 					</ul>
 				</div>
 			</div>
@@ -236,7 +219,6 @@
 				<div class="flex flex-wrap items-center justify-center gap-6 text-sm">
 					<a href="/privacy" class="text-gray-500 transition-colors hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">Privacy Policy</a>
 					<a href="/terms" class="text-gray-500 transition-colors hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">Terms of Service</a>
-					<a href="/cookies" class="text-gray-500 transition-colors hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">Cookie Policy</a>
 					<ThemeToggle />
 				</div>
 			</div>
