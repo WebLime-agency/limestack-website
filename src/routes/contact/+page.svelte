@@ -1,23 +1,5 @@
 <script lang="ts">
-	import { IconMail, IconMessageCircle, IconClock, IconBrandX, IconBrandLinkedin, IconMapPin, IconSend } from '@tabler/icons-svelte';
-
-	let formData = $state({
-		name: '',
-		email: '',
-		subject: 'general',
-		message: ''
-	});
-
-	let isSubmitting = $state(false);
-	let isSubmitted = $state(false);
-
-	const subjects = [
-		{ value: 'general', label: 'General Inquiry' },
-		{ value: 'sales', label: 'Sales Question' },
-		{ value: 'support', label: 'Technical Support' },
-		{ value: 'partnership', label: 'Partnership Opportunity' },
-		{ value: 'press', label: 'Press Inquiry' }
-	];
+	import { IconMail, IconMessageCircle, IconClock, IconBrandX, IconBrandLinkedin, IconMapPin } from '@tabler/icons-svelte';
 
 	const contactMethods = [
 		{
@@ -42,17 +24,6 @@
 			action: null
 		}
 	];
-
-	async function handleSubmit(e: Event) {
-		e.preventDefault();
-		isSubmitting = true;
-
-		// Simulate form submission
-		await new Promise((resolve) => setTimeout(resolve, 1500));
-
-		isSubmitting = false;
-		isSubmitted = true;
-	}
 </script>
 
 <svelte:head>
@@ -110,95 +81,16 @@
 					Fill out the form below and we'll get back to you as soon as possible.
 				</p>
 
-				{#if isSubmitted}
-					<div class="mt-8 rounded-xl bg-primary-50 p-8 text-center">
-						<div class="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary-100">
-							<IconSend size={32} class="text-primary-600" />
-						</div>
-						<h3 class="text-xl font-semibold text-gray-900">Message sent!</h3>
-						<p class="mt-2 text-gray-600">
-							Thanks for reaching out. We'll get back to you within 24 hours.
-						</p>
-						<button
-							onclick={() => {
-								isSubmitted = false;
-								formData = { name: '', email: '', subject: 'general', message: '' };
-							}}
-							class="mt-6 rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50"
-						>
-							Send another message
-						</button>
-					</div>
-				{:else}
-					<form onsubmit={handleSubmit} class="mt-8 space-y-6">
-						<div class="grid gap-6 sm:grid-cols-2">
-							<div>
-								<label for="name" class="mb-1 block text-sm font-medium text-gray-700">Name</label>
-								<input
-									type="text"
-									id="name"
-									bind:value={formData.name}
-									required
-									class="block w-full rounded-lg border border-gray-300 px-4 py-3 shadow-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
-									placeholder="Your name"
-								/>
-							</div>
-							<div>
-								<label for="email" class="mb-1 block text-sm font-medium text-gray-700">Email</label>
-								<input
-									type="email"
-									id="email"
-									bind:value={formData.email}
-									required
-									class="block w-full rounded-lg border border-gray-300 px-4 py-3 shadow-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
-									placeholder="you@example.com"
-								/>
-							</div>
-						</div>
-
-						<div>
-							<label for="subject" class="mb-1 block text-sm font-medium text-gray-700">Subject</label>
-							<select
-								id="subject"
-								bind:value={formData.subject}
-								class="block w-full rounded-lg border border-gray-300 px-4 py-3 shadow-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
-							>
-								{#each subjects as subject}
-									<option value={subject.value}>{subject.label}</option>
-								{/each}
-							</select>
-						</div>
-
-						<div>
-							<label for="message" class="mb-1 block text-sm font-medium text-gray-700">Message</label>
-							<textarea
-								id="message"
-								bind:value={formData.message}
-								required
-								rows="5"
-								class="block w-full resize-none rounded-lg border border-gray-300 px-4 py-3 shadow-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
-								placeholder="How can we help you?"
-							></textarea>
-						</div>
-
-						<button
-							type="submit"
-							disabled={isSubmitting}
-							class="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary-600 px-6 py-3 font-medium text-white transition-colors hover:bg-primary-700 disabled:cursor-not-allowed disabled:opacity-50"
-						>
-							{#if isSubmitting}
-								<svg class="h-5 w-5 animate-spin" viewBox="0 0 24 24" fill="none">
-									<circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-									<path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-								</svg>
-								Sending...
-							{:else}
-								<IconSend size={18} />
-								Send Message
-							{/if}
-						</button>
-					</form>
-				{/if}
+				<div class="mt-8">
+					<iframe
+						src="https://limey.io/form/3aqm3Lo"
+						width="100%"
+						height="600"
+						frameborder="0"
+						style="border: none; max-width: 100%;"
+						title="Contact form"
+					></iframe>
+				</div>
 			</div>
 
 			<!-- Info -->
