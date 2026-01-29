@@ -6,7 +6,6 @@
 	const plans = [
 		{
 			name: 'Free',
-			description: 'Get started with basic inventory management',
 			monthlyPrice: 0,
 			yearlyPrice: 0,
 			features: [
@@ -25,7 +24,6 @@
 		},
 		{
 			name: 'Pro',
-			description: 'For active resellers ready to scale',
 			monthlyPrice: 29,
 			yearlyPrice: 24,
 			features: [
@@ -44,7 +42,6 @@
 		},
 		{
 			name: 'Business',
-			description: 'For power sellers',
 			monthlyPrice: 59,
 			yearlyPrice: 49,
 			features: [
@@ -173,7 +170,6 @@
 
 					<div class="p-8">
 						<h3 class="text-xl font-semibold text-gray-900 dark:text-gray-50">{plan.name}</h3>
-						<p class="mt-2 text-gray-600 dark:text-gray-300">{plan.description}</p>
 
 						<div class="mt-6 flex flex-wrap items-baseline gap-x-2">
 							<span class="text-4xl font-bold text-gray-900 dark:text-gray-50">${getPrice(plan)}</span>
