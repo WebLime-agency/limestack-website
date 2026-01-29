@@ -85,9 +85,10 @@
 					<iframe
 						src="https://limey.io/form/3aqm3Lo"
 						width="100%"
-						height="600"
+						height="680"
 						frameborder="0"
-						style="border: none; max-width: 100%;"
+						scrolling="no"
+						style="border: none; max-width: 100%; overflow: hidden;"
 						title="Contact form"
 					></iframe>
 				</div>
@@ -174,17 +175,3 @@
 	</div>
 </section>
 
-<!-- Map placeholder -->
-<section class="py-12">
-	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-		<div class="h-80 overflow-hidden rounded-xl bg-gray-200">
-			<div class="flex h-full items-center justify-center">
-				<div class="text-center">
-					<IconMapPin size={48} class="mx-auto text-gray-400" />
-					<p class="mt-2 text-gray-500">Map placeholder</p>
-					<p class="text-sm text-gray-400">San Francisco, CA</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
