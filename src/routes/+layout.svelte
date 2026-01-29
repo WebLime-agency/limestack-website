@@ -115,7 +115,7 @@
 					<a href="https://app.limestack.io/auth/login" class="rounded-lg px-4 py-2 text-sm font-medium text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-50">
 						Log in
 					</a>
-					<a href="/signup" class="rounded-lg bg-primary-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-primary-700">
+					<a href="https://app.limestack.io/auth/login" class="rounded-lg bg-primary-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-primary-700">
 						Get Started Free
 					</a>
 				</div>
@@ -150,7 +150,7 @@
 						<a href="https://app.limestack.io/auth/login" class="rounded-lg px-4 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50 dark:text-gray-300 dark:hover:bg-gray-800">
 							Log in
 						</a>
-						<a href="/signup" class="mx-4 mt-2 rounded-lg bg-primary-600 px-4 py-2 text-center text-sm font-medium text-white">
+						<a href="https://app.limestack.io/auth/login" class="mx-4 mt-2 rounded-lg bg-primary-600 px-4 py-2 text-center text-sm font-medium text-white">
 							Get Started Free
 						</a>
 					</div>
@@ -192,13 +192,16 @@
 					</div>
 				</div>
 
-				<!-- Product -->
+				<!-- Features -->
 				<div>
-					<h4 class="font-semibold text-gray-900 dark:text-gray-50">Product</h4>
+					<h4 class="font-semibold text-gray-900 dark:text-gray-50">Features</h4>
 					<ul class="mt-4 space-y-3 text-sm">
-						<li><a href="/features" class="text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-50">Features</a></li>
-						<li><a href="/pricing" class="text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-50">Pricing</a></li>
-						<li><a href="/features#integrations" class="text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-50">Integrations</a></li>
+						<li><a href="/features#inventory" class="text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-50">Inventory Management</a></li>
+						<li><a href="/features#listings" class="text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-50">Listing Management</a></li>
+						<li><a href="/features#orders" class="text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-50">Orders & Shipping</a></li>
+						<li><a href="/features#source" class="text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-50">Source Deals</a></li>
+						<li><a href="/features#offers" class="text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-50">Offer Management</a></li>
+						<li><a href="/features#analytics" class="text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-50">Analytics</a></li>
 					</ul>
 				</div>
 
@@ -207,7 +210,6 @@
 					<h4 class="font-semibold text-gray-900 dark:text-gray-50">Company</h4>
 					<ul class="mt-4 space-y-3 text-sm">
 						<li><a href="/about" class="text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-50">About Us</a></li>
-						<li><a href="/careers" class="text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-50">Careers</a></li>
 						<li><a href="/contact" class="text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-300 dark:hover:text-gray-50">Contact</a></li>
 					</ul>
 				</div>

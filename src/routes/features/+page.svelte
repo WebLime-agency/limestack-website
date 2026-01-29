@@ -417,7 +417,7 @@
 		</p>
 		<div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
 			<a
-				href="/signup"
+				href="https://app.limestack.io/auth/login"
 				class="inline-flex items-center gap-2 rounded-xl bg-white px-8 py-4 text-base font-semibold text-primary-700 shadow-lg transition-all hover:bg-primary-50"
 			>
 				Start Free Today

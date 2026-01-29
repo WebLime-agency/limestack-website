@@ -196,7 +196,7 @@
 					If you have any questions about these Terms of Service, please contact us at:
 				</p>
 				<p class="text-gray-600 dark:text-gray-300 leading-relaxed mt-4">
-					<a href="mailto:legal@limestack.io" class="text-lime-600 dark:text-lime-400 hover:underline">
+					<a href="mailto:legal@limestack.io" class="text-primary-600 dark:text-primary-400 hover:underline">
 						legal@limestack.io
 					</a>
 				</p>

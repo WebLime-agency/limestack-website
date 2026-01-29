@@ -180,7 +180,7 @@
 						</div>
 
 						<a
-							href="/signup"
+							href="https://app.limestack.io/auth/login"
 							class="mt-8 block w-full rounded-lg {plan.highlighted
 								? 'bg-primary-600 text-white hover:bg-primary-700'
 								: 'border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800'} py-3 text-center font-medium transition-colors"
@@ -301,7 +301,7 @@
 </section>
 
 <!-- FAQ Section -->
-<section class="py-20">
+<section id="faq" class="py-20">
 	<div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
 		<div class="text-center">
 			<span class="text-sm font-semibold uppercase tracking-wider text-primary-600 dark:text-primary-400">FAQ</span>
@@ -349,7 +349,7 @@
 		</p>
 		<div class="mt-10">
 			<a
-				href="/signup"
+				href="https://app.limestack.io/auth/login"
 				class="inline-flex items-center gap-2 rounded-xl bg-white px-8 py-4 text-base font-semibold text-primary-700 shadow-lg transition-all hover:bg-primary-50"
 			>
 				Start Your Free Account

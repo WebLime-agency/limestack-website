@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { IconMail, IconMessageCircle, IconClock, IconBrandX, IconBrandLinkedin, IconMapPin } from '@tabler/icons-svelte';
+	import { IconMail, IconClock, IconBrandX, IconBrandLinkedin } from '@tabler/icons-svelte';
 
 	const contactMethods = [
 		{
@@ -8,13 +8,6 @@
 			description: 'For general inquiries and support',
 			contact: 'hello@limestack.io',
 			action: 'mailto:hello@limestack.io'
-		},
-		{
-			icon: IconMessageCircle,
-			title: 'Live Chat',
-			description: 'Chat with our team in real-time',
-			contact: 'Available in-app',
-			action: '#'
 		},
 		{
 			icon: IconClock,
@@ -49,7 +42,7 @@
 <!-- Contact Methods -->
 <section class="pb-12">
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-		<div class="grid gap-6 sm:grid-cols-3">
+		<div class="grid gap-6 sm:grid-cols-2">
 			{#each contactMethods as method}
 				<div class="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-6 text-center">
 					<div class="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary-100 dark:bg-primary-900/40">
@@ -145,20 +138,7 @@
 						</div>
 					</div>
 
-					<hr class="my-6 border-gray-200 dark:border-gray-700" />
-
-					<div class="flex items-start gap-3">
-						<IconMapPin size={20} class="mt-0.5 shrink-0 text-gray-400 dark:text-gray-500" />
-						<div>
-							<h4 class="font-medium text-gray-900 dark:text-gray-50">Our location</h4>
-							<p class="mt-1 text-sm text-gray-600 dark:text-gray-300">
-								123 Market Street<br />
-								San Francisco, CA 94105<br />
-								United States
-							</p>
-						</div>
 					</div>
-				</div>
 
 				<!-- FAQ callout -->
 				<div class="mt-6 rounded-xl border border-primary-200 dark:border-primary-700 bg-primary-50 dark:bg-primary-950/30 p-6">

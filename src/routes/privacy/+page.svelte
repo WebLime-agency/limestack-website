@@ -181,7 +181,7 @@
 				If you have any questions about this Privacy Policy or our data practices, please contact us at:
 			</p>
 			<p class="text-gray-600 dark:text-gray-300 leading-relaxed mt-4">
-				<a href="mailto:privacy@limestack.io" class="text-lime-600 dark:text-lime-400 hover:text-lime-700 dark:hover:text-lime-300 underline">
+				<a href="mailto:privacy@limestack.io" class="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 underline">
 					privacy@limestack.io
 				</a>
 			</p>

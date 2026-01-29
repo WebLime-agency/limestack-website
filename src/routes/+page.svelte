@@ -80,6 +80,7 @@
 
 <svelte:head>
 	<title>LimeStack - Inventory & Listing Management for eBay Sellers</title>
+	<meta name="description" content="LimeStack is the all-in-one platform for eBay resellers. Source deals, manage inventory, create listings, ship orders, and track profits — all from one place." />
 </svelte:head>
 
 <!-- Hero Section -->
@@ -115,7 +116,7 @@
 				<!-- CTA Buttons -->
 				<div class="mt-10 flex flex-col gap-4 sm:flex-row">
 					<a
-						href="/signup"
+						href="https://app.limestack.io/auth/login"
 						class="inline-flex items-center justify-center gap-2 rounded-xl bg-primary-600 px-8 py-4 text-base font-semibold text-white shadow-lg shadow-primary-600/30 transition-all hover:bg-primary-700 hover:shadow-xl hover:shadow-primary-600/40"
 					>
 						Start Free Today
@@ -325,7 +326,7 @@
 		</p>
 		<div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
 			<a
-				href="/signup"
+				href="https://app.limestack.io/auth/login"
 				class="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-white px-8 py-4 text-base font-semibold text-primary-700 shadow-lg transition-all hover:bg-primary-50 sm:w-auto"
 			>
 				Start Free Today
