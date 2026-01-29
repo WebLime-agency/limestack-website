@@ -131,20 +131,20 @@
 </svelte:head>
 
 <!-- Hero -->
-<section class="bg-gradient-to-b from-gray-50 to-white py-20">
+<section class="bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 pt-36 pb-20">
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 		<div class="mx-auto max-w-3xl text-center">
-			<span class="text-sm font-semibold uppercase tracking-wider text-primary-600">Pricing</span>
-			<h1 class="mt-3 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+			<span class="text-sm font-semibold uppercase tracking-wider text-primary-600 dark:text-primary-400">Pricing</span>
+			<h1 class="mt-3 text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-50 sm:text-5xl">
 				Simple, transparent pricing
 			</h1>
-			<p class="mt-6 text-lg text-gray-600">
+			<p class="mt-6 text-lg text-gray-600 dark:text-gray-300">
 				Start free and scale as you grow. No hidden fees, no surprises.
 			</p>
 
 			<!-- Billing toggle -->
 			<div class="mt-10 flex items-center justify-center gap-4">
-				<span class="text-sm font-medium {billingPeriod === 'monthly' ? 'text-gray-900' : 'text-gray-500'}">Monthly</span>
+				<span class="text-sm font-medium {billingPeriod === 'monthly' ? 'text-gray-900 dark:text-gray-50' : 'text-gray-500 dark:text-gray-400'}">Monthly</span>
 				<button
 					onclick={() => (billingPeriod = billingPeriod === 'monthly' ? 'yearly' : 'monthly')}
 					class="relative h-6 w-12 rounded-full bg-primary-600 transition-colors"
@@ -153,9 +153,9 @@
 						class="absolute top-1 h-4 w-4 rounded-full bg-white shadow transition-all {billingPeriod === 'yearly' ? 'left-7' : 'left-1'}"
 					></span>
 				</button>
-				<span class="text-sm font-medium {billingPeriod === 'yearly' ? 'text-gray-900' : 'text-gray-500'}">
+				<span class="text-sm font-medium {billingPeriod === 'yearly' ? 'text-gray-900 dark:text-gray-50' : 'text-gray-500 dark:text-gray-400'}">
 					Yearly
-					<span class="ml-1 rounded-full bg-primary-100 px-2 py-0.5 text-xs font-medium text-primary-700">Save 17%</span>
+					<span class="ml-1 rounded-full bg-primary-100 dark:bg-primary-900/40 px-2 py-0.5 text-xs font-medium text-primary-700 dark:text-primary-300">Save 17%</span>
 				</span>
 			</div>
 		</div>
@@ -169,8 +169,8 @@
 			{#each plans as plan}
 				<div
 					class="relative flex flex-col rounded-2xl border {plan.highlighted
-						? 'border-primary-500 shadow-xl shadow-primary-100'
-						: 'border-gray-200'} bg-white"
+						? 'border-primary-500 shadow-xl shadow-primary-100 dark:shadow-primary-900/20'
+						: 'border-gray-200 dark:border-gray-700'} bg-white dark:bg-gray-900"
 				>
 					{#if plan.badge}
 						<div class="absolute -top-4 left-1/2 -translate-x-1/2">
@@ -179,14 +179,14 @@
 					{/if}
 
 					<div class="p-8">
-						<h3 class="text-xl font-semibold text-gray-900">{plan.name}</h3>
-						<p class="mt-2 text-gray-600">{plan.description}</p>
+						<h3 class="text-xl font-semibold text-gray-900 dark:text-gray-50">{plan.name}</h3>
+						<p class="mt-2 text-gray-600 dark:text-gray-300">{plan.description}</p>
 
-						<div class="mt-6">
-							<span class="text-4xl font-bold text-gray-900">${getPrice(plan)}</span>
-							<span class="text-gray-600">{plan.monthlyPrice === 0 ? '/forever' : '/month'}</span>
+						<div class="mt-6 flex flex-wrap items-baseline gap-x-2">
+							<span class="text-4xl font-bold text-gray-900 dark:text-gray-50">${getPrice(plan)}</span>
+							<span class="text-gray-600 dark:text-gray-300">{plan.monthlyPrice === 0 ? '/forever' : '/month'}</span>
 							{#if billingPeriod === 'yearly' && getSavings(plan) > 0}
-								<p class="mt-1 text-sm text-primary-600">Save ${getSavings(plan)}/year</p>
+								<span class="relative -top-px rounded-full bg-primary-100 px-2.5 py-0.5 text-xs font-semibold text-primary-700 dark:bg-primary-900/40 dark:text-primary-300">Save ${getSavings(plan)}/yr</span>
 							{/if}
 						</div>
 
@@ -194,23 +194,23 @@
 							href="/signup"
 							class="mt-8 block w-full rounded-lg {plan.highlighted
 								? 'bg-primary-600 text-white hover:bg-primary-700'
-								: 'border border-gray-300 bg-white text-gray-700 hover:bg-gray-50'} py-3 text-center font-medium transition-colors"
+								: 'border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800'} py-3 text-center font-medium transition-colors"
 						>
 							{plan.cta}
 						</a>
 					</div>
 
-					<div class="flex-1 border-t border-gray-100 p-8">
-						<p class="mb-4 text-sm font-medium text-gray-900">What's included:</p>
+					<div class="flex-1 border-t border-gray-100 dark:border-gray-700/80 p-8">
+						<p class="mb-4 text-sm font-medium text-gray-900 dark:text-gray-50">What's included:</p>
 						<ul class="space-y-3">
 							{#each plan.features as feature}
 								<li class="flex items-center gap-3">
 									{#if feature.included}
-										<IconCheck size={18} class="shrink-0 text-primary-600" />
-										<span class="text-gray-700">{feature.name}</span>
+										<IconCheck size={18} class="shrink-0 text-primary-600 dark:text-primary-400" />
+										<span class="text-gray-700 dark:text-gray-200">{feature.name}</span>
 									{:else}
-										<IconX size={18} class="shrink-0 text-gray-300" />
-										<span class="text-gray-400">{feature.name}</span>
+										<IconX size={18} class="shrink-0 text-gray-300 dark:text-gray-600" />
+										<span class="text-gray-400 dark:text-gray-500">{feature.name}</span>
 									{/if}
 								</li>
 							{/each}
@@ -221,17 +221,17 @@
 		</div>
 
 		<!-- Trust badges -->
-		<div class="mt-12 flex flex-wrap items-center justify-center gap-8 text-sm text-gray-500">
+		<div class="mt-12 flex flex-wrap items-center justify-center gap-8 text-sm text-gray-500 dark:text-gray-400">
 			<div class="flex items-center gap-2">
-				<IconShieldCheck size={20} class="text-primary-600" />
+				<IconShieldCheck size={20} class="text-primary-600 dark:text-primary-400" />
 				<span>30-day money-back guarantee</span>
 			</div>
 			<div class="flex items-center gap-2">
-				<IconHeadset size={20} class="text-primary-600" />
+				<IconHeadset size={20} class="text-primary-600 dark:text-primary-400" />
 				<span>Cancel anytime</span>
 			</div>
 			<div class="flex items-center gap-2">
-				<IconRefresh size={20} class="text-primary-600" />
+				<IconRefresh size={20} class="text-primary-600 dark:text-primary-400" />
 				<span>No long-term contracts</span>
 			</div>
 		</div>
@@ -239,83 +239,83 @@
 </section>
 
 <!-- Comparison Table -->
-<section class="bg-gray-50 py-20">
+<section class="bg-gray-50 dark:bg-gray-800 py-20">
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 		<div class="mx-auto max-w-2xl text-center">
-			<h2 class="text-3xl font-bold text-gray-900">Compare plans</h2>
-			<p class="mt-4 text-gray-600">See which plan is right for your business.</p>
+			<h2 class="text-3xl font-bold text-gray-900 dark:text-gray-50">Compare plans</h2>
+			<p class="mt-4 text-gray-600 dark:text-gray-300">See which plan is right for your business.</p>
 		</div>
 
 		<div class="mt-12 overflow-x-auto">
 			<table class="w-full min-w-[640px] border-collapse">
 				<thead>
 					<tr>
-						<th class="p-4 text-left font-medium text-gray-500">Features</th>
-						<th class="p-4 text-center font-semibold text-gray-900">Starter</th>
-						<th class="rounded-t-lg bg-primary-50 p-4 text-center font-semibold text-primary-700">Pro</th>
-						<th class="p-4 text-center font-semibold text-gray-900">Business</th>
+						<th class="p-4 text-left font-medium text-gray-500 dark:text-gray-400">Features</th>
+						<th class="p-4 text-center font-semibold text-gray-900 dark:text-gray-50">Starter</th>
+						<th class="rounded-t-lg bg-primary-50 dark:bg-primary-950/30 p-4 text-center font-semibold text-primary-700 dark:text-primary-300">Pro</th>
+						<th class="p-4 text-center font-semibold text-gray-900 dark:text-gray-50">Business</th>
 					</tr>
 				</thead>
-				<tbody class="divide-y divide-gray-200">
+				<tbody class="divide-y divide-gray-200 dark:divide-gray-700">
 					<tr>
-						<td class="p-4 text-gray-700">Inventory items</td>
-						<td class="p-4 text-center text-gray-600">100</td>
-						<td class="bg-primary-50/50 p-4 text-center text-gray-600">Unlimited</td>
-						<td class="p-4 text-center text-gray-600">Unlimited</td>
+						<td class="p-4 text-gray-700 dark:text-gray-200">Inventory items</td>
+						<td class="p-4 text-center text-gray-600 dark:text-gray-300">100</td>
+						<td class="bg-primary-50/50 dark:bg-primary-950/20 p-4 text-center text-gray-600 dark:text-gray-300">Unlimited</td>
+						<td class="p-4 text-center text-gray-600 dark:text-gray-300">Unlimited</td>
 					</tr>
 					<tr>
-						<td class="p-4 text-gray-700">eBay accounts</td>
-						<td class="p-4 text-center text-gray-600">1</td>
-						<td class="bg-primary-50/50 p-4 text-center text-gray-600">3</td>
-						<td class="p-4 text-center text-gray-600">Unlimited</td>
+						<td class="p-4 text-gray-700 dark:text-gray-200">eBay accounts</td>
+						<td class="p-4 text-center text-gray-600 dark:text-gray-300">1</td>
+						<td class="bg-primary-50/50 dark:bg-primary-950/20 p-4 text-center text-gray-600 dark:text-gray-300">3</td>
+						<td class="p-4 text-center text-gray-600 dark:text-gray-300">Unlimited</td>
 					</tr>
 					<tr>
-						<td class="p-4 text-gray-700">Order tracking</td>
-						<td class="p-4 text-center"><IconCheck size={18} class="mx-auto text-primary-600" /></td>
-						<td class="bg-primary-50/50 p-4 text-center"><IconCheck size={18} class="mx-auto text-primary-600" /></td>
-						<td class="p-4 text-center"><IconCheck size={18} class="mx-auto text-primary-600" /></td>
+						<td class="p-4 text-gray-700 dark:text-gray-200">Order tracking</td>
+						<td class="p-4 text-center"><IconCheck size={18} class="mx-auto text-primary-600 dark:text-primary-400" /></td>
+						<td class="bg-primary-50/50 dark:bg-primary-950/20 p-4 text-center"><IconCheck size={18} class="mx-auto text-primary-600 dark:text-primary-400" /></td>
+						<td class="p-4 text-center"><IconCheck size={18} class="mx-auto text-primary-600 dark:text-primary-400" /></td>
 					</tr>
 					<tr>
-						<td class="p-4 text-gray-700">Analytics</td>
-						<td class="p-4 text-center text-gray-600">Basic</td>
-						<td class="bg-primary-50/50 p-4 text-center text-gray-600">Advanced</td>
-						<td class="p-4 text-center text-gray-600">Advanced</td>
+						<td class="p-4 text-gray-700 dark:text-gray-200">Analytics</td>
+						<td class="p-4 text-center text-gray-600 dark:text-gray-300">Basic</td>
+						<td class="bg-primary-50/50 dark:bg-primary-950/20 p-4 text-center text-gray-600 dark:text-gray-300">Advanced</td>
+						<td class="p-4 text-center text-gray-600 dark:text-gray-300">Advanced</td>
 					</tr>
 					<tr>
-						<td class="p-4 text-gray-700">Source deal finder</td>
-						<td class="p-4 text-center"><IconX size={18} class="mx-auto text-gray-300" /></td>
-						<td class="bg-primary-50/50 p-4 text-center"><IconCheck size={18} class="mx-auto text-primary-600" /></td>
-						<td class="p-4 text-center"><IconCheck size={18} class="mx-auto text-primary-600" /></td>
+						<td class="p-4 text-gray-700 dark:text-gray-200">Source deal finder</td>
+						<td class="p-4 text-center"><IconX size={18} class="mx-auto text-gray-300 dark:text-gray-600" /></td>
+						<td class="bg-primary-50/50 dark:bg-primary-950/20 p-4 text-center"><IconCheck size={18} class="mx-auto text-primary-600 dark:text-primary-400" /></td>
+						<td class="p-4 text-center"><IconCheck size={18} class="mx-auto text-primary-600 dark:text-primary-400" /></td>
 					</tr>
 					<tr>
-						<td class="p-4 text-gray-700">Offer management</td>
-						<td class="p-4 text-center"><IconX size={18} class="mx-auto text-gray-300" /></td>
-						<td class="bg-primary-50/50 p-4 text-center"><IconCheck size={18} class="mx-auto text-primary-600" /></td>
-						<td class="p-4 text-center"><IconCheck size={18} class="mx-auto text-primary-600" /></td>
+						<td class="p-4 text-gray-700 dark:text-gray-200">Offer management</td>
+						<td class="p-4 text-center"><IconX size={18} class="mx-auto text-gray-300 dark:text-gray-600" /></td>
+						<td class="bg-primary-50/50 dark:bg-primary-950/20 p-4 text-center"><IconCheck size={18} class="mx-auto text-primary-600 dark:text-primary-400" /></td>
+						<td class="p-4 text-center"><IconCheck size={18} class="mx-auto text-primary-600 dark:text-primary-400" /></td>
 					</tr>
 					<tr>
-						<td class="p-4 text-gray-700">Bulk operations</td>
-						<td class="p-4 text-center"><IconX size={18} class="mx-auto text-gray-300" /></td>
-						<td class="bg-primary-50/50 p-4 text-center"><IconCheck size={18} class="mx-auto text-primary-600" /></td>
-						<td class="p-4 text-center"><IconCheck size={18} class="mx-auto text-primary-600" /></td>
+						<td class="p-4 text-gray-700 dark:text-gray-200">Bulk operations</td>
+						<td class="p-4 text-center"><IconX size={18} class="mx-auto text-gray-300 dark:text-gray-600" /></td>
+						<td class="bg-primary-50/50 dark:bg-primary-950/20 p-4 text-center"><IconCheck size={18} class="mx-auto text-primary-600 dark:text-primary-400" /></td>
+						<td class="p-4 text-center"><IconCheck size={18} class="mx-auto text-primary-600 dark:text-primary-400" /></td>
 					</tr>
 					<tr>
-						<td class="p-4 text-gray-700">API access</td>
-						<td class="p-4 text-center"><IconX size={18} class="mx-auto text-gray-300" /></td>
-						<td class="bg-primary-50/50 p-4 text-center"><IconX size={18} class="mx-auto text-gray-300" /></td>
-						<td class="p-4 text-center"><IconCheck size={18} class="mx-auto text-primary-600" /></td>
+						<td class="p-4 text-gray-700 dark:text-gray-200">API access</td>
+						<td class="p-4 text-center"><IconX size={18} class="mx-auto text-gray-300 dark:text-gray-600" /></td>
+						<td class="bg-primary-50/50 dark:bg-primary-950/20 p-4 text-center"><IconX size={18} class="mx-auto text-gray-300 dark:text-gray-600" /></td>
+						<td class="p-4 text-center"><IconCheck size={18} class="mx-auto text-primary-600 dark:text-primary-400" /></td>
 					</tr>
 					<tr>
-						<td class="p-4 text-gray-700">Team members</td>
-						<td class="p-4 text-center"><IconX size={18} class="mx-auto text-gray-300" /></td>
-						<td class="bg-primary-50/50 p-4 text-center"><IconX size={18} class="mx-auto text-gray-300" /></td>
-						<td class="p-4 text-center"><IconCheck size={18} class="mx-auto text-primary-600" /></td>
+						<td class="p-4 text-gray-700 dark:text-gray-200">Team members</td>
+						<td class="p-4 text-center"><IconX size={18} class="mx-auto text-gray-300 dark:text-gray-600" /></td>
+						<td class="bg-primary-50/50 dark:bg-primary-950/20 p-4 text-center"><IconX size={18} class="mx-auto text-gray-300 dark:text-gray-600" /></td>
+						<td class="p-4 text-center"><IconCheck size={18} class="mx-auto text-primary-600 dark:text-primary-400" /></td>
 					</tr>
 					<tr>
-						<td class="p-4 text-gray-700">Support</td>
-						<td class="p-4 text-center text-gray-600">Email</td>
-						<td class="bg-primary-50/50 p-4 text-center text-gray-600">Priority</td>
-						<td class="p-4 text-center text-gray-600">Dedicated</td>
+						<td class="p-4 text-gray-700 dark:text-gray-200">Support</td>
+						<td class="p-4 text-center text-gray-600 dark:text-gray-300">Email</td>
+						<td class="bg-primary-50/50 dark:bg-primary-950/20 p-4 text-center text-gray-600 dark:text-gray-300">Priority</td>
+						<td class="p-4 text-center text-gray-600 dark:text-gray-300">Dedicated</td>
 					</tr>
 				</tbody>
 			</table>
@@ -327,22 +327,22 @@
 <section class="py-20">
 	<div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
 		<div class="text-center">
-			<span class="text-sm font-semibold uppercase tracking-wider text-primary-600">FAQ</span>
-			<h2 class="mt-3 text-3xl font-bold text-gray-900">
+			<span class="text-sm font-semibold uppercase tracking-wider text-primary-600 dark:text-primary-400">FAQ</span>
+			<h2 class="mt-3 text-3xl font-bold text-gray-900 dark:text-gray-50">
 				Frequently asked questions
 			</h2>
 		</div>
 
 		<div class="mt-12 space-y-4">
 			{#each faqs as faq, index}
-				<div class="rounded-xl border border-gray-200 bg-white">
+				<div class="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900">
 					<button
 						onclick={() => toggleFaq(index)}
 						class="flex w-full items-center justify-between px-6 py-4 text-left"
 					>
-						<span class="font-medium text-gray-900">{faq.question}</span>
+						<span class="font-medium text-gray-900 dark:text-gray-50">{faq.question}</span>
 						<svg
-							class="h-5 w-5 shrink-0 text-gray-500 transition-transform {openFaq === index ? 'rotate-180' : ''}"
+							class="h-5 w-5 shrink-0 text-gray-500 dark:text-gray-400 transition-transform {openFaq === index ? 'rotate-180' : ''}"
 							fill="none"
 							viewBox="0 0 24 24"
 							stroke="currentColor"
@@ -351,8 +351,8 @@
 						</svg>
 					</button>
 					{#if openFaq === index}
-						<div class="border-t border-gray-100 px-6 py-4">
-							<p class="text-gray-600">{faq.answer}</p>
+						<div class="border-t border-gray-100 dark:border-gray-700/80 px-6 py-4">
+							<p class="text-gray-600 dark:text-gray-300">{faq.answer}</p>
 						</div>
 					{/if}
 				</div>

@@ -110,50 +110,50 @@
 
 <!-- Article Header -->
 <article>
-	<header class="bg-gradient-to-b from-gray-50 to-white py-12 sm:py-20">
+	<header class="bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 pt-28 pb-12 sm:pt-36 sm:pb-20">
 		<div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
 			<!-- Back link -->
-			<a href="/blog" class="mb-8 inline-flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-gray-900">
+			<a href="/blog" class="mb-8 inline-flex items-center gap-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-50">
 				<IconArrowLeft size={16} />
 				Back to Blog
 			</a>
 
 			<!-- Category & Meta -->
 			<div class="mb-4 flex flex-wrap items-center gap-3">
-				<span class="rounded-full bg-primary-100 px-3 py-1 text-sm font-medium text-primary-700">{post.category}</span>
-				<span class="flex items-center gap-1 text-sm text-gray-500">
+				<span class="rounded-full bg-primary-100 dark:bg-primary-900/40 px-3 py-1 text-sm font-medium text-primary-700 dark:text-primary-300">{post.category}</span>
+				<span class="flex items-center gap-1 text-sm text-gray-500 dark:text-gray-400">
 					<IconClock size={14} />
 					{post.readTime}
 				</span>
-				<span class="text-sm text-gray-500">{post.date}</span>
+				<span class="text-sm text-gray-500 dark:text-gray-400">{post.date}</span>
 			</div>
 
 			<!-- Title -->
-			<h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl">
+			<h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-gray-50 sm:text-4xl lg:text-5xl">
 				{post.title}
 			</h1>
 
 			<!-- Excerpt -->
-			<p class="mt-6 text-xl text-gray-600">
+			<p class="mt-6 text-xl text-gray-600 dark:text-gray-300">
 				{post.excerpt}
 			</p>
 
 			<!-- Author -->
-			<div class="mt-8 flex items-center justify-between border-t border-gray-100 pt-8">
+			<div class="mt-8 flex items-center justify-between border-t border-gray-100 dark:border-gray-700/80 pt-8">
 				<div class="flex items-center gap-4">
-					<div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary-100 text-lg font-semibold text-primary-700">
+					<div class="flex h-12 w-12 items-center justify-center rounded-full bg-primary-100 dark:bg-primary-900/40 text-lg font-semibold text-primary-700 dark:text-primary-300">
 						{post.author.avatar}
 					</div>
 					<div>
-						<p class="font-semibold text-gray-900">{post.author.name}</p>
-						<p class="text-sm text-gray-500">{post.author.role}</p>
+						<p class="font-semibold text-gray-900 dark:text-gray-50">{post.author.name}</p>
+						<p class="text-sm text-gray-500 dark:text-gray-400">{post.author.role}</p>
 					</div>
 				</div>
 				<div class="flex items-center gap-2">
-					<button class="rounded-lg border border-gray-200 p-2 text-gray-500 hover:bg-gray-50 hover:text-gray-700">
+					<button class="rounded-lg border border-gray-200 dark:border-gray-700 p-2 text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-200">
 						<IconBookmark size={20} />
 					</button>
-					<button class="rounded-lg border border-gray-200 p-2 text-gray-500 hover:bg-gray-50 hover:text-gray-700">
+					<button class="rounded-lg border border-gray-200 dark:border-gray-700 p-2 text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-200">
 						<IconShare size={20} />
 					</button>
 				</div>
@@ -163,11 +163,11 @@
 
 	<!-- Featured Image -->
 	<div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-		<div class="aspect-video overflow-hidden rounded-2xl bg-gradient-to-br from-primary-100 to-primary-200">
+		<div class="aspect-video overflow-hidden rounded-2xl bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-900/40 dark:to-primary-800/40">
 			<div class="flex h-full items-center justify-center">
 				<div class="text-center">
 					<span class="text-8xl">📦</span>
-					<p class="mt-4 text-xl font-medium text-primary-700">Sourcing Like a Pro</p>
+					<p class="mt-4 text-xl font-medium text-primary-700 dark:text-primary-300">Sourcing Like a Pro</p>
 				</div>
 			</div>
 		</div>
@@ -176,45 +176,45 @@
 	<!-- Article Content -->
 	<div class="py-12">
 		<div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-			<div class="prose prose-lg prose-gray max-w-none prose-headings:font-bold prose-headings:text-gray-900 prose-p:text-gray-600 prose-a:text-primary-600 prose-a:no-underline hover:prose-a:underline prose-blockquote:border-l-primary-500 prose-blockquote:bg-gray-50 prose-blockquote:py-1 prose-blockquote:pl-4 prose-blockquote:not-italic prose-li:text-gray-600">
+			<div class="prose prose-lg prose-gray dark:prose-invert max-w-none prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-gray-50 prose-p:text-gray-600 dark:prose-p:text-gray-300 prose-a:text-primary-600 dark:prose-a:text-primary-400 prose-a:no-underline hover:prose-a:underline prose-blockquote:border-l-primary-500 prose-blockquote:bg-gray-50 dark:prose-blockquote:bg-gray-800 prose-blockquote:py-1 prose-blockquote:pl-4 prose-blockquote:not-italic prose-li:text-gray-600 dark:prose-li:text-gray-300">
 				{@html post.content}
 			</div>
 
 			<!-- Tags -->
-			<div class="mt-12 flex flex-wrap gap-2 border-t border-gray-100 pt-8">
+			<div class="mt-12 flex flex-wrap gap-2 border-t border-gray-100 dark:border-gray-700/80 pt-8">
 				{#each ['Sourcing', 'Inventory', 'eBay', 'Beginners', 'Strategy'] as tag}
-					<a href="/blog?tag={tag}" class="rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-600 hover:bg-gray-200">
+					<a href="/blog?tag={tag}" class="rounded-full bg-gray-100 dark:bg-gray-700 px-3 py-1 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600">
 						#{tag}
 					</a>
 				{/each}
 			</div>
 
 			<!-- Share -->
-			<div class="mt-8 flex items-center justify-between border-t border-gray-100 pt-8">
-				<span class="font-medium text-gray-900">Share this article</span>
+			<div class="mt-8 flex items-center justify-between border-t border-gray-100 dark:border-gray-700/80 pt-8">
+				<span class="font-medium text-gray-900 dark:text-gray-50">Share this article</span>
 				<div class="flex gap-2">
-					<a href="#" class="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-100 text-gray-600 hover:bg-gray-200">
+					<a href="#" class="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600">
 						<IconBrandX size={20} />
 					</a>
-					<a href="#" class="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-100 text-gray-600 hover:bg-gray-200">
+					<a href="#" class="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600">
 						<IconBrandLinkedin size={20} />
 					</a>
-					<a href="#" class="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-100 text-gray-600 hover:bg-gray-200">
+					<a href="#" class="flex h-10 w-10 items-center justify-center rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600">
 						<IconBrandFacebook size={20} />
 					</a>
 				</div>
 			</div>
 
 			<!-- Author Bio -->
-			<div class="mt-8 rounded-xl bg-gray-50 p-6">
+			<div class="mt-8 rounded-xl bg-gray-50 dark:bg-gray-800 p-6">
 				<div class="flex items-start gap-4">
-					<div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-primary-100 text-xl font-semibold text-primary-700">
+					<div class="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-primary-100 dark:bg-primary-900/40 text-xl font-semibold text-primary-700 dark:text-primary-300">
 						{post.author.avatar}
 					</div>
 					<div>
-						<p class="font-semibold text-gray-900">{post.author.name}</p>
-						<p class="text-sm text-primary-600">{post.author.role}</p>
-						<p class="mt-2 text-sm text-gray-600">{post.author.bio}</p>
+						<p class="font-semibold text-gray-900 dark:text-gray-50">{post.author.name}</p>
+						<p class="text-sm text-primary-600 dark:text-primary-400">{post.author.role}</p>
+						<p class="mt-2 text-sm text-gray-600 dark:text-gray-300">{post.author.bio}</p>
 					</div>
 				</div>
 			</div>
@@ -223,20 +223,20 @@
 </article>
 
 <!-- Related Posts -->
-<section class="border-t border-gray-100 bg-gray-50 py-16">
+<section class="border-t border-gray-100 dark:border-gray-700/80 bg-gray-50 dark:bg-gray-800 py-16">
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-		<h2 class="text-2xl font-bold text-gray-900">Related Articles</h2>
+		<h2 class="text-2xl font-bold text-gray-900 dark:text-gray-50">Related Articles</h2>
 		<div class="mt-8 grid gap-6 sm:grid-cols-3">
 			{#each relatedPosts as relatedPost}
 				<a
 					href="/blog/{relatedPost.slug}"
-					class="group rounded-xl border border-gray-200 bg-white p-6 transition-all hover:shadow-lg"
+					class="group rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 p-6 transition-all hover:shadow-lg"
 				>
-					<span class="rounded-full bg-gray-100 px-2 py-0.5 text-xs font-medium text-gray-600">{relatedPost.category}</span>
-					<h3 class="mt-3 font-semibold text-gray-900 group-hover:text-primary-600">
+					<span class="rounded-full bg-gray-100 dark:bg-gray-700 px-2 py-0.5 text-xs font-medium text-gray-600 dark:text-gray-300">{relatedPost.category}</span>
+					<h3 class="mt-3 font-semibold text-gray-900 dark:text-gray-50 group-hover:text-primary-600 dark:group-hover:text-primary-400">
 						{relatedPost.title}
 					</h3>
-					<p class="mt-2 flex items-center gap-1 text-sm text-gray-500">
+					<p class="mt-2 flex items-center gap-1 text-sm text-gray-500 dark:text-gray-400">
 						<IconClock size={14} />
 						{relatedPost.readTime}
 					</p>
@@ -275,5 +275,8 @@
 	:global(.prose .lead) {
 		font-size: 1.25rem;
 		color: #4b5563;
+	}
+	:global(.dark .prose .lead) {
+		color: #d1d5db;
 	}
 </style>

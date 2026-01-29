@@ -88,14 +88,14 @@
 </svelte:head>
 
 <!-- Hero -->
-<section class="bg-gradient-to-b from-gray-50 to-white py-20">
+<section class="bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 pt-36 pb-20">
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 		<div class="mx-auto max-w-3xl text-center">
-			<span class="text-sm font-semibold uppercase tracking-wider text-primary-600">Blog</span>
-			<h1 class="mt-3 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+			<span class="text-sm font-semibold uppercase tracking-wider text-primary-600 dark:text-primary-400">Blog</span>
+			<h1 class="mt-3 text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-50 sm:text-5xl">
 				Insights for resellers
 			</h1>
-			<p class="mt-6 text-lg text-gray-600">
+			<p class="mt-6 text-lg text-gray-600 dark:text-gray-300">
 				Tips, guides, and strategies to help you grow your reselling business.
 			</p>
 		</div>
@@ -107,42 +107,42 @@
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 		<a
 			href="/blog/{featuredPost.slug}"
-			class="group block overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-all hover:shadow-lg"
+			class="group block overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-sm transition-all hover:shadow-lg"
 		>
 			<div class="grid lg:grid-cols-2">
 				<!-- Image -->
-				<div class="aspect-video bg-gradient-to-br from-primary-100 to-primary-200 lg:aspect-auto lg:h-full">
+				<div class="aspect-video bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-900/40 dark:to-primary-800/40 lg:aspect-auto lg:h-full">
 					<div class="flex h-full items-center justify-center">
 						<div class="text-center">
 							<span class="text-6xl">📦</span>
-							<p class="mt-2 font-medium text-primary-700">Featured Article</p>
+							<p class="mt-2 font-medium text-primary-700 dark:text-primary-300">Featured Article</p>
 						</div>
 					</div>
 				</div>
 				<!-- Content -->
 				<div class="p-8 lg:p-12">
 					<div class="flex items-center gap-3">
-						<span class="rounded-full bg-primary-100 px-3 py-1 text-xs font-medium text-primary-700">{featuredPost.category}</span>
-						<span class="text-sm text-gray-500">Featured</span>
+						<span class="rounded-full bg-primary-100 dark:bg-primary-900/40 px-3 py-1 text-xs font-medium text-primary-700 dark:text-primary-300">{featuredPost.category}</span>
+						<span class="text-sm text-gray-500 dark:text-gray-400">Featured</span>
 					</div>
-					<h2 class="mt-4 text-2xl font-bold text-gray-900 group-hover:text-primary-600 sm:text-3xl">
+					<h2 class="mt-4 text-2xl font-bold text-gray-900 dark:text-gray-50 group-hover:text-primary-600 dark:group-hover:text-primary-400 sm:text-3xl">
 						{featuredPost.title}
 					</h2>
-					<p class="mt-4 text-gray-600">
+					<p class="mt-4 text-gray-600 dark:text-gray-300">
 						{featuredPost.excerpt}
 					</p>
 					<div class="mt-6 flex items-center gap-4">
 						<div class="flex items-center gap-2">
-							<div class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 text-xs font-medium text-gray-600">
+							<div class="flex h-8 w-8 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700 text-xs font-medium text-gray-600 dark:text-gray-300">
 								{featuredPost.author.split(' ').map(n => n[0]).join('')}
 							</div>
 							<div>
-								<p class="text-sm font-medium text-gray-900">{featuredPost.author}</p>
-								<p class="text-xs text-gray-500">{featuredPost.authorRole}</p>
+								<p class="text-sm font-medium text-gray-900 dark:text-gray-50">{featuredPost.author}</p>
+								<p class="text-xs text-gray-500 dark:text-gray-400">{featuredPost.authorRole}</p>
 							</div>
 						</div>
-						<span class="text-gray-300">|</span>
-						<div class="flex items-center gap-4 text-sm text-gray-500">
+						<span class="text-gray-300 dark:text-gray-600">|</span>
+						<div class="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
 							<span>{featuredPost.date}</span>
 							<span class="flex items-center gap-1">
 								<IconClock size={14} />
@@ -150,7 +150,7 @@
 							</span>
 						</div>
 					</div>
-					<div class="mt-6 flex items-center gap-1 font-medium text-primary-600 group-hover:gap-2">
+					<div class="mt-6 flex items-center gap-1 font-medium text-primary-600 dark:text-primary-400 group-hover:gap-2">
 						Read article
 						<IconArrowRight size={18} class="transition-transform group-hover:translate-x-1" />
 					</div>
@@ -167,34 +167,34 @@
 			<!-- Sidebar -->
 			<aside class="lg:col-span-1">
 				<div class="sticky top-24">
-					<h3 class="font-semibold text-gray-900">Categories</h3>
+					<h3 class="font-semibold text-gray-900 dark:text-gray-50">Categories</h3>
 					<ul class="mt-4 space-y-2">
 						{#each categories as category}
 							<li>
 								<button
 									onclick={() => (selectedCategory = category.name)}
-									class="flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-sm transition-colors {selectedCategory === category.name ? 'bg-primary-50 font-medium text-primary-700' : 'text-gray-600 hover:bg-gray-50'}"
+									class="flex w-full items-center justify-between rounded-lg px-3 py-2 text-left text-sm transition-colors {selectedCategory === category.name ? 'bg-primary-50 dark:bg-primary-950/30 font-medium text-primary-700 dark:text-primary-300' : 'text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'}"
 								>
 									{category.name}
-									<span class="rounded-full bg-gray-100 px-2 py-0.5 text-xs text-gray-500">{category.count}</span>
+									<span class="rounded-full bg-gray-100 dark:bg-gray-700 px-2 py-0.5 text-xs text-gray-500 dark:text-gray-400">{category.count}</span>
 								</button>
 							</li>
 						{/each}
 					</ul>
 
-					<hr class="my-6 border-gray-200" />
+					<hr class="my-6 border-gray-200 dark:border-gray-700" />
 
 					<!-- Newsletter -->
-					<div class="rounded-xl bg-primary-50 p-6">
-						<h3 class="font-semibold text-gray-900">Stay updated</h3>
-						<p class="mt-2 text-sm text-gray-600">
+					<div class="rounded-xl bg-primary-50 dark:bg-primary-950/30 p-6">
+						<h3 class="font-semibold text-gray-900 dark:text-gray-50">Stay updated</h3>
+						<p class="mt-2 text-sm text-gray-600 dark:text-gray-300">
 							Get the latest tips and strategies delivered to your inbox.
 						</p>
 						<form class="mt-4 space-y-3">
 							<input
 								type="email"
 								placeholder="Enter your email"
-								class="block w-full rounded-lg border border-gray-300 px-3 py-2 text-sm shadow-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
+								class="block w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 px-3 py-2 text-sm shadow-sm focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
 							/>
 							<button
 								type="submit"
@@ -213,10 +213,10 @@
 					{#each posts as post}
 						<a
 							href="/blog/{post.slug}"
-							class="group flex flex-col overflow-hidden rounded-xl border border-gray-200 bg-white transition-all hover:shadow-lg"
+							class="group flex flex-col overflow-hidden rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 transition-all hover:shadow-lg"
 						>
 							<!-- Image placeholder -->
-							<div class="aspect-video bg-gradient-to-br from-gray-100 to-gray-200">
+							<div class="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-600">
 								<div class="flex h-full items-center justify-center">
 									<span class="text-4xl">📝</span>
 								</div>
@@ -224,26 +224,26 @@
 							<!-- Content -->
 							<div class="flex flex-1 flex-col p-6">
 								<div class="flex items-center gap-2">
-									<span class="rounded-full bg-gray-100 px-2 py-0.5 text-xs font-medium text-gray-600">{post.category}</span>
-									<span class="flex items-center gap-1 text-xs text-gray-400">
+									<span class="rounded-full bg-gray-100 dark:bg-gray-700 px-2 py-0.5 text-xs font-medium text-gray-600 dark:text-gray-300">{post.category}</span>
+									<span class="flex items-center gap-1 text-xs text-gray-400 dark:text-gray-500">
 										<IconClock size={12} />
 										{post.readTime}
 									</span>
 								</div>
-								<h3 class="mt-3 font-semibold text-gray-900 group-hover:text-primary-600">
+								<h3 class="mt-3 font-semibold text-gray-900 dark:text-gray-50 group-hover:text-primary-600 dark:group-hover:text-primary-400">
 									{post.title}
 								</h3>
-								<p class="mt-2 flex-1 text-sm text-gray-600">
+								<p class="mt-2 flex-1 text-sm text-gray-600 dark:text-gray-300">
 									{post.excerpt}
 								</p>
 								<div class="mt-4 flex items-center justify-between text-sm">
 									<div class="flex items-center gap-2">
-										<div class="flex h-6 w-6 items-center justify-center rounded-full bg-gray-100 text-xs font-medium text-gray-600">
+										<div class="flex h-6 w-6 items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700 text-xs font-medium text-gray-600 dark:text-gray-300">
 											{post.author.split(' ').map(n => n[0]).join('')}
 										</div>
-										<span class="text-gray-600">{post.author}</span>
+										<span class="text-gray-600 dark:text-gray-300">{post.author}</span>
 									</div>
-									<span class="text-gray-400">{post.date}</span>
+									<span class="text-gray-400 dark:text-gray-500">{post.date}</span>
 								</div>
 							</div>
 						</a>
@@ -252,13 +252,13 @@
 
 				<!-- Pagination -->
 				<div class="mt-12 flex items-center justify-center gap-2">
-					<button class="rounded-lg border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">
+					<button class="rounded-lg border border-gray-300 dark:border-gray-600 px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">
 						Previous
 					</button>
 					<button class="rounded-lg bg-primary-600 px-4 py-2 text-sm font-medium text-white">1</button>
-					<button class="rounded-lg border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">2</button>
-					<button class="rounded-lg border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">3</button>
-					<button class="rounded-lg border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50">
+					<button class="rounded-lg border border-gray-300 dark:border-gray-600 px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">2</button>
+					<button class="rounded-lg border border-gray-300 dark:border-gray-600 px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">3</button>
+					<button class="rounded-lg border border-gray-300 dark:border-gray-600 px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800">
 						Next
 					</button>
 				</div>
