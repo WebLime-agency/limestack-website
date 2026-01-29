@@ -5,20 +5,19 @@
 
 	const plans = [
 		{
-			name: 'Starter',
-			description: 'Perfect for getting started with reselling',
+			name: 'Free',
+			description: 'Get started with basic inventory management',
 			monthlyPrice: 0,
 			yearlyPrice: 0,
 			features: [
-				{ name: 'Up to 100 inventory items', included: true },
-				{ name: '1 eBay account', included: true },
-				{ name: 'Basic analytics', included: true },
-				{ name: 'Order tracking', included: true },
-				{ name: 'Email support', included: true },
-				{ name: 'Source deal finder', included: false },
-				{ name: 'Offer management', included: false },
-				{ name: 'Bulk operations', included: false },
-				{ name: 'API access', included: false }
+				{ name: 'Up to 10 active listings', included: true },
+				{ name: '10 orders synced per month', included: true },
+				{ name: '10 shipping labels per month', included: true },
+				{ name: '10 AI generations per month', included: true },
+				{ name: 'Weekly source scans', included: true },
+				{ name: 'Daily offer checks', included: true },
+				{ name: 'All future marketplaces', included: true },
+				{ name: 'Analytics', included: false }
 			],
 			cta: 'Start Free',
 			highlighted: false,
@@ -26,19 +25,18 @@
 		},
 		{
 			name: 'Pro',
-			description: 'For serious resellers ready to scale',
+			description: 'For active resellers ready to scale',
 			monthlyPrice: 29,
 			yearlyPrice: 24,
 			features: [
-				{ name: 'Unlimited inventory items', included: true },
-				{ name: 'Up to 3 eBay accounts', included: true },
-				{ name: 'Advanced analytics', included: true },
-				{ name: 'Order tracking', included: true },
-				{ name: 'Priority support', included: true },
-				{ name: 'Source deal finder', included: true },
-				{ name: 'Offer management', included: true },
-				{ name: 'Bulk operations', included: true },
-				{ name: 'API access', included: false }
+				{ name: 'Up to 150 active listings', included: true },
+				{ name: '150 orders synced per month', included: true },
+				{ name: '150 shipping labels per month', included: true },
+				{ name: '150 AI generations per month', included: true },
+				{ name: 'Daily source scans', included: true },
+				{ name: 'Daily offer checks', included: true },
+				{ name: 'Basic analytics', included: true },
+				{ name: 'All future marketplaces', included: true }
 			],
 			cta: 'Start Free Trial',
 			highlighted: true,
@@ -46,21 +44,20 @@
 		},
 		{
 			name: 'Business',
-			description: 'For high-volume sellers and teams',
-			monthlyPrice: 79,
-			yearlyPrice: 66,
+			description: 'For power sellers',
+			monthlyPrice: 59,
+			yearlyPrice: 49,
 			features: [
-				{ name: 'Unlimited inventory items', included: true },
-				{ name: 'Unlimited eBay accounts', included: true },
+				{ name: 'Unlimited listings', included: true },
+				{ name: 'Unlimited orders synced', included: true },
+				{ name: 'Unlimited shipping labels', included: true },
+				{ name: 'Unlimited AI generations', included: true },
+				{ name: 'Source scans every 4 hours', included: true },
+				{ name: 'Hourly offer checks', included: true },
 				{ name: 'Advanced analytics', included: true },
-				{ name: 'Order tracking', included: true },
-				{ name: 'Dedicated support', included: true },
-				{ name: 'Source deal finder', included: true },
-				{ name: 'Offer management', included: true },
-				{ name: 'Bulk operations', included: true },
-				{ name: 'API access', included: true }
+				{ name: 'All future marketplaces', included: true }
 			],
-			cta: 'Contact Sales',
+			cta: 'Start Free Trial',
 			highlighted: false,
 			badge: null
 		}
@@ -69,11 +66,11 @@
 	const faqs = [
 		{
 			question: 'Is there really a free plan?',
-			answer: "Yes! Our Starter plan is completely free forever. It's perfect for new resellers or those who want to try LimeStack before upgrading. No credit card required."
+			answer: "Yes! Our Free plan is completely free forever. It includes up to 10 active listings, shipping labels, and AI generations per month — perfect for getting started. No credit card required."
 		},
 		{
 			question: 'How does the free trial work?',
-			answer: 'When you sign up for Pro or Business, you get a 14-day free trial with full access to all features. No credit card required to start. At the end of your trial, you can choose to subscribe or continue with the free Starter plan.'
+			answer: 'When you sign up for Pro or Business, you get a 14-day free trial with full access to all features. No credit card required to start. At the end of your trial, you can choose to subscribe or continue with the Free plan.'
 		},
 		{
 			question: 'Can I change plans later?',
@@ -84,12 +81,8 @@
 			answer: 'We accept all major credit cards (Visa, Mastercard, American Express, Discover) as well as PayPal. For Business plans, we can also arrange invoicing for annual subscriptions.'
 		},
 		{
-			question: 'How does eBay account counting work?',
-			answer: "Each connected eBay account counts toward your plan's limit. For example, if you have a personal and business eBay account, that counts as 2 accounts. You can connect/disconnect accounts at any time."
-		},
-		{
 			question: 'What happens to my data if I cancel?',
-			answer: "If you cancel, you'll keep access until the end of your billing period. After that, your account will be downgraded to the Starter plan. Your data is retained for 30 days in case you want to resubscribe, then it's securely deleted."
+			answer: "If you cancel, you'll keep access until the end of your billing period. After that, your account will be downgraded to the Free plan. Your data is retained for 30 days in case you want to resubscribe, then it's securely deleted."
 		},
 		{
 			question: 'Do you offer refunds?',
@@ -105,7 +98,7 @@
 		},
 		{
 			question: 'Can I get a demo before signing up?',
-			answer: "Of course! You can start with our free Starter plan to explore the platform, or contact our sales team for a personalized demo. We're happy to walk you through the features and answer any questions."
+			answer: "Of course! You can start with our Free plan to explore the platform, or contact our sales team for a personalized demo. We're happy to walk you through the features and answer any questions."
 		}
 	];
 
@@ -251,71 +244,59 @@
 				<thead>
 					<tr>
 						<th class="p-4 text-left font-medium text-gray-500 dark:text-gray-400">Features</th>
-						<th class="p-4 text-center font-semibold text-gray-900 dark:text-gray-50">Starter</th>
+						<th class="p-4 text-center font-semibold text-gray-900 dark:text-gray-50">Free</th>
 						<th class="rounded-t-lg bg-primary-50 dark:bg-primary-950/30 p-4 text-center font-semibold text-primary-700 dark:text-primary-300">Pro</th>
 						<th class="p-4 text-center font-semibold text-gray-900 dark:text-gray-50">Business</th>
 					</tr>
 				</thead>
 				<tbody class="divide-y divide-gray-200 dark:divide-gray-700">
 					<tr>
-						<td class="p-4 text-gray-700 dark:text-gray-200">Inventory items</td>
-						<td class="p-4 text-center text-gray-600 dark:text-gray-300">100</td>
-						<td class="bg-primary-50/50 dark:bg-primary-950/20 p-4 text-center text-gray-600 dark:text-gray-300">Unlimited</td>
+						<td class="p-4 text-gray-700 dark:text-gray-200">Active listings</td>
+						<td class="p-4 text-center text-gray-600 dark:text-gray-300">10</td>
+						<td class="bg-primary-50/50 dark:bg-primary-950/20 p-4 text-center text-gray-600 dark:text-gray-300">150</td>
 						<td class="p-4 text-center text-gray-600 dark:text-gray-300">Unlimited</td>
 					</tr>
 					<tr>
-						<td class="p-4 text-gray-700 dark:text-gray-200">eBay accounts</td>
-						<td class="p-4 text-center text-gray-600 dark:text-gray-300">1</td>
-						<td class="bg-primary-50/50 dark:bg-primary-950/20 p-4 text-center text-gray-600 dark:text-gray-300">3</td>
+						<td class="p-4 text-gray-700 dark:text-gray-200">Orders synced / month</td>
+						<td class="p-4 text-center text-gray-600 dark:text-gray-300">10</td>
+						<td class="bg-primary-50/50 dark:bg-primary-950/20 p-4 text-center text-gray-600 dark:text-gray-300">150</td>
 						<td class="p-4 text-center text-gray-600 dark:text-gray-300">Unlimited</td>
 					</tr>
 					<tr>
-						<td class="p-4 text-gray-700 dark:text-gray-200">Order tracking</td>
-						<td class="p-4 text-center"><IconCheck size={18} class="mx-auto text-primary-600 dark:text-primary-400" /></td>
-						<td class="bg-primary-50/50 dark:bg-primary-950/20 p-4 text-center"><IconCheck size={18} class="mx-auto text-primary-600 dark:text-primary-400" /></td>
-						<td class="p-4 text-center"><IconCheck size={18} class="mx-auto text-primary-600 dark:text-primary-400" /></td>
+						<td class="p-4 text-gray-700 dark:text-gray-200">Shipping labels / month</td>
+						<td class="p-4 text-center text-gray-600 dark:text-gray-300">10</td>
+						<td class="bg-primary-50/50 dark:bg-primary-950/20 p-4 text-center text-gray-600 dark:text-gray-300">150</td>
+						<td class="p-4 text-center text-gray-600 dark:text-gray-300">Unlimited</td>
+					</tr>
+					<tr>
+						<td class="p-4 text-gray-700 dark:text-gray-200">AI generations / month</td>
+						<td class="p-4 text-center text-gray-600 dark:text-gray-300">10</td>
+						<td class="bg-primary-50/50 dark:bg-primary-950/20 p-4 text-center text-gray-600 dark:text-gray-300">150</td>
+						<td class="p-4 text-center text-gray-600 dark:text-gray-300">Unlimited</td>
+					</tr>
+					<tr>
+						<td class="p-4 text-gray-700 dark:text-gray-200">Source scans</td>
+						<td class="p-4 text-center text-gray-600 dark:text-gray-300">Weekly</td>
+						<td class="bg-primary-50/50 dark:bg-primary-950/20 p-4 text-center text-gray-600 dark:text-gray-300">Daily</td>
+						<td class="p-4 text-center text-gray-600 dark:text-gray-300">Every 4 hours</td>
+					</tr>
+					<tr>
+						<td class="p-4 text-gray-700 dark:text-gray-200">Offer checks</td>
+						<td class="p-4 text-center text-gray-600 dark:text-gray-300">Daily</td>
+						<td class="bg-primary-50/50 dark:bg-primary-950/20 p-4 text-center text-gray-600 dark:text-gray-300">Daily</td>
+						<td class="p-4 text-center text-gray-600 dark:text-gray-300">Hourly</td>
 					</tr>
 					<tr>
 						<td class="p-4 text-gray-700 dark:text-gray-200">Analytics</td>
-						<td class="p-4 text-center text-gray-600 dark:text-gray-300">Basic</td>
-						<td class="bg-primary-50/50 dark:bg-primary-950/20 p-4 text-center text-gray-600 dark:text-gray-300">Advanced</td>
+						<td class="p-4 text-center"><IconX size={18} class="mx-auto text-gray-300 dark:text-gray-600" /></td>
+						<td class="bg-primary-50/50 dark:bg-primary-950/20 p-4 text-center text-gray-600 dark:text-gray-300">Basic</td>
 						<td class="p-4 text-center text-gray-600 dark:text-gray-300">Advanced</td>
 					</tr>
 					<tr>
-						<td class="p-4 text-gray-700 dark:text-gray-200">Source deal finder</td>
-						<td class="p-4 text-center"><IconX size={18} class="mx-auto text-gray-300 dark:text-gray-600" /></td>
+						<td class="p-4 text-gray-700 dark:text-gray-200">Future marketplaces</td>
+						<td class="p-4 text-center"><IconCheck size={18} class="mx-auto text-primary-600 dark:text-primary-400" /></td>
 						<td class="bg-primary-50/50 dark:bg-primary-950/20 p-4 text-center"><IconCheck size={18} class="mx-auto text-primary-600 dark:text-primary-400" /></td>
 						<td class="p-4 text-center"><IconCheck size={18} class="mx-auto text-primary-600 dark:text-primary-400" /></td>
-					</tr>
-					<tr>
-						<td class="p-4 text-gray-700 dark:text-gray-200">Offer management</td>
-						<td class="p-4 text-center"><IconX size={18} class="mx-auto text-gray-300 dark:text-gray-600" /></td>
-						<td class="bg-primary-50/50 dark:bg-primary-950/20 p-4 text-center"><IconCheck size={18} class="mx-auto text-primary-600 dark:text-primary-400" /></td>
-						<td class="p-4 text-center"><IconCheck size={18} class="mx-auto text-primary-600 dark:text-primary-400" /></td>
-					</tr>
-					<tr>
-						<td class="p-4 text-gray-700 dark:text-gray-200">Bulk operations</td>
-						<td class="p-4 text-center"><IconX size={18} class="mx-auto text-gray-300 dark:text-gray-600" /></td>
-						<td class="bg-primary-50/50 dark:bg-primary-950/20 p-4 text-center"><IconCheck size={18} class="mx-auto text-primary-600 dark:text-primary-400" /></td>
-						<td class="p-4 text-center"><IconCheck size={18} class="mx-auto text-primary-600 dark:text-primary-400" /></td>
-					</tr>
-					<tr>
-						<td class="p-4 text-gray-700 dark:text-gray-200">API access</td>
-						<td class="p-4 text-center"><IconX size={18} class="mx-auto text-gray-300 dark:text-gray-600" /></td>
-						<td class="bg-primary-50/50 dark:bg-primary-950/20 p-4 text-center"><IconX size={18} class="mx-auto text-gray-300 dark:text-gray-600" /></td>
-						<td class="p-4 text-center"><IconCheck size={18} class="mx-auto text-primary-600 dark:text-primary-400" /></td>
-					</tr>
-					<tr>
-						<td class="p-4 text-gray-700 dark:text-gray-200">Team members</td>
-						<td class="p-4 text-center"><IconX size={18} class="mx-auto text-gray-300 dark:text-gray-600" /></td>
-						<td class="bg-primary-50/50 dark:bg-primary-950/20 p-4 text-center"><IconX size={18} class="mx-auto text-gray-300 dark:text-gray-600" /></td>
-						<td class="p-4 text-center"><IconCheck size={18} class="mx-auto text-primary-600 dark:text-primary-400" /></td>
-					</tr>
-					<tr>
-						<td class="p-4 text-gray-700 dark:text-gray-200">Support</td>
-						<td class="p-4 text-center text-gray-600 dark:text-gray-300">Email</td>
-						<td class="bg-primary-50/50 dark:bg-primary-950/20 p-4 text-center text-gray-600 dark:text-gray-300">Priority</td>
-						<td class="p-4 text-center text-gray-600 dark:text-gray-300">Dedicated</td>
 					</tr>
 				</tbody>
 			</table>
