@@ -10,35 +10,36 @@ Goal: Improve organic discoverability via search engines and AI tools (Google, B
 
 These are the baseline requirements for search engines to properly crawl and index the site.
 
-### 1.1 Sitemap (`sitemap.xml`)
+### 1.1 Sitemap (`sitemap.xml`) ✅
 
-- **Status:** Missing
+- **Status:** Complete — live at https://limestack.io/sitemap.xml, 7 pages discovered
 - **Impact:** High — search engines can't efficiently discover pages without one
 - **Tool:** [super-sitemap](https://github.com/jasongitmail/super-sitemap) (SvelteKit-native, auto-discovers routes, TypeScript, handles dynamic routes)
 - **Tasks:**
-  - [ ] Install `super-sitemap` (`npm i -D super-sitemap`)
-  - [ ] Create `/src/routes/sitemap.xml/+server.ts` with origin `https://limestack.io`
-  - [ ] Exclude non-indexable routes (e.g. error pages) via `excludeRoutePatterns`
+  - [x] Install `super-sitemap` (`npm i -D super-sitemap`)
+  - [x] Create `/src/routes/sitemap.xml/+server.ts` with origin `https://limestack.io`
+  - [x] Exclude blog routes via `excludeRoutePatterns` (blog deferred for now)
   - [ ] Add blog slug param values once blog has real content
-  - [ ] Add `Sitemap: https://limestack.io/sitemap.xml` to `static/robots.txt`
-  - [ ] Verify sitemap renders at `https://limestack.io/sitemap.xml` after deploy
-  - [ ] Submit sitemap in Google Search Console and Bing Webmaster Tools
+  - [x] Add `Sitemap: https://limestack.io/sitemap.xml` to `static/robots.txt`
+  - [x] Verify sitemap renders at `https://limestack.io/sitemap.xml` after deploy
+  - [x] Submit sitemap in Google Search Console (submitted Feb 3, 2026 — Status: Success, 7 pages)
+  - [ ] Submit sitemap in Bing Webmaster Tools
 
-### 1.2 Canonical URLs
+### 1.2 Canonical URLs ✅
 
-- **Status:** Missing on all pages
+- **Status:** Complete — added to `+layout.svelte` using `$page.url.pathname`
 - **Impact:** High — prevents duplicate content penalties from trailing slashes, query params, etc.
 - **Tasks:**
-  - [ ] Add `<link rel="canonical" href="..." />` in `+layout.svelte` using `$page.url.pathname`
-  - [ ] Ensure canonical is absolute URL (`https://limestack.io` + path)
-  - [ ] Strip trailing slashes and query params from canonical
+  - [x] Add `<link rel="canonical" href="..." />` in `+layout.svelte` using `$page.url.pathname`
+  - [x] Ensure canonical is absolute URL (`https://limestack.io` + path)
+  - [x] SvelteKit `$page.url.pathname` already strips query params; trailing slash handled by SvelteKit config
 
-### 1.3 Fix `og:url` (hardcoded to homepage)
+### 1.3 Fix `og:url` (hardcoded to homepage) ✅
 
-- **Status:** `og:url` is always `https://limestack.io` regardless of page
+- **Status:** Complete — now dynamic per page, done alongside 1.2
 - **Impact:** Medium — social shares for `/pricing`, `/features`, etc. all point back to homepage
 - **Tasks:**
-  - [ ] Make `og:url` dynamic using `$page.url.pathname` (same approach as canonical)
+  - [x] Make `og:url` dynamic using `$page.url.pathname` (same approach as canonical)
 
 ### 1.4 Preconnect hint for Plausible
 
@@ -196,9 +197,10 @@ Technical SEO gets you indexed. Content gets you ranked.
 
 These are external steps (not code changes) but critical for SEO.
 
-- [ ] Set up Google Search Console (verify with DNS TXT record or HTML file)
+- [x] Set up Google Search Console (verified, active)
 - [ ] Set up Bing Webmaster Tools
-- [ ] Submit sitemap to both
+- [x] Submit sitemap to Google Search Console (Feb 3, 2026 — Success, 7 pages)
+- [ ] Submit sitemap to Bing Webmaster Tools
 - [ ] Monitor Core Web Vitals in Search Console
 - [ ] Request indexing for key pages after changes are deployed
 - [ ] Set up Bing's IndexNow for faster indexing (Cloudflare supports this natively)
@@ -209,9 +211,9 @@ These are external steps (not code changes) but critical for SEO.
 
 | Phase | Item | Status |
 |-------|------|--------|
-| 1.1 | Sitemap (super-sitemap) | Not started |
-| 1.2 | Canonical URLs | Not started |
-| 1.3 | Fix og:url | Not started |
+| 1.1 | Sitemap (super-sitemap) | ✅ Complete |
+| 1.2 | Canonical URLs | ✅ Complete |
+| 1.3 | Fix og:url | ✅ Complete |
 | 1.4 | Preconnect hint | Not started |
 | 2.1 | Organization schema | Not started |
 | 2.2 | WebSite schema | Not started |
@@ -227,5 +229,5 @@ These are external steps (not code changes) but critical for SEO.
 | 5.2 | Favicon sizes | Not started |
 | 5.3 | Twitter handle | Not started |
 | 5.4 | Image alt text | Future |
-| — | Google Search Console | Not started |
+| — | Google Search Console | ✅ Complete |
 | — | Bing Webmaster Tools | Not started |

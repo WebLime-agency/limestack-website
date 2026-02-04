@@ -59,7 +59,8 @@
 	<meta property="og:title" content="LimeStack - Inventory & Listing Management for eBay Sellers" />
 	<meta property="og:description" content="Source deals, manage inventory, create listings, ship orders, and track profits — all from one place." />
 	<meta property="og:image" content="https://limestack.io/og-image.png" />
-	<meta property="og:url" content="https://limestack.io" />
+	<meta property="og:url" content="https://limestack.io{$page.url.pathname}" />
+	<link rel="canonical" href="https://limestack.io{$page.url.pathname}" />
 
 	<!-- Twitter / X -->
 	<meta name="twitter:card" content="summary_large_image" />
