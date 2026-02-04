@@ -41,12 +41,12 @@ These are the baseline requirements for search engines to properly crawl and ind
 - **Tasks:**
   - [x] Make `og:url` dynamic using `$page.url.pathname` (same approach as canonical)
 
-### 1.4 Preconnect hint for Plausible
+### 1.4 Preconnect hint for Plausible ✅
 
-- **Status:** Missing
+- **Status:** Complete — added to `app.html` before the Plausible script
 - **Impact:** Low — minor performance improvement
 - **Tasks:**
-  - [ ] Add `<link rel="preconnect" href="https://plausible.io" />` in `app.html` before the Plausible script
+  - [x] Add `<link rel="preconnect" href="https://plausible.io" />` in `app.html` before the Plausible script
 
 ---
 
@@ -214,7 +214,7 @@ These are external steps (not code changes) but critical for SEO.
 | 1.1 | Sitemap (super-sitemap) | ✅ Complete |
 | 1.2 | Canonical URLs | ✅ Complete |
 | 1.3 | Fix og:url | ✅ Complete |
-| 1.4 | Preconnect hint | Not started |
+| 1.4 | Preconnect hint | ✅ Complete |
 | 2.1 | Organization schema | Not started |
 | 2.2 | WebSite schema | Not started |
 | 2.3 | SoftwareApplication schema | Not started |
